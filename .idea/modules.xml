@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../cfission/explorer/explorer.iml" filepath="$PROJECT_DIR$/../cfission/explorer/explorer.iml" />
+      <module fileurl="file://D:\IDEA\workspace\cfission\explorer\explorer.iml" filepath="D:\IDEA\workspace\cfission\explorer\explorer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cfission/explorer-parent/explorer-parent.iml" filepath="$PROJECT_DIR$/../cfission/explorer-parent/explorer-parent.iml" />
+      <module fileurl="file://D:\IDEA\workspace\cfission\explorer-parent\explorer-parent.iml" filepath="D:\IDEA\workspace\cfission\explorer-parent\explorer-parent.iml" />
+    </modules>
+  </component>
+</project>
