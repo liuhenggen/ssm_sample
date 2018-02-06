@@ -2,10 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- 设置为IUserDao接口方法提供sql语句配置 -->
-<mapper namespace="com.demo.dao.IUserDao">
+<mapper namespace="com.ssm.dao.IUserDao">
 
     <select id="selectUser" resultType="User" parameterType="long">
         SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <insert id="insertUser"  parameterType="User">
+        INSERT  INTO user(username,password,email,role,status,regTime,regIp) VALUES (#{username},#{password},#{email},#{role},#{status},#{regTime},#{regIp})
+    </insert>
+
+    <select id="get" resultType="User" parameterType="long">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <select id="delete" resultType="User" parameterType="long">
+        DELETE  FROM  user WHERE  id = #{id}
     </select>
 
 </mapper>

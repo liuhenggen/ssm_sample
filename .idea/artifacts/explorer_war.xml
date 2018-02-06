@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="explorer:war">
-    <output-path>$PROJECT_DIR$/../cfission/explorer/target</output-path>
-    <root id="archive" name="explorer-1.0.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="explorer:war exploded" />
-    </root>
-  </artifact>
-</component>
