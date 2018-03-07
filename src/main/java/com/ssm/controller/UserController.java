@@ -23,6 +23,56 @@ public class UserController {
 
     @Autowired
     private UserService userServices;
+    /*
+    * 进入首页
+    * */
+
+    @RequestMapping(value = "/index",method = RequestMethod.GET)
+    public String index(){
+        return "user/register";
+    }
+
+    @RequestMapping(value = "toLogin",method = RequestMethod.GET)
+    public String ToLogin(){
+
+        return "user/login";
+    }
+
+    /*
+     * 注册
+     */
+    @RequestMapping(value = "/register",method = RequestMethod.POST)
+    public String Register(User user){
+        user.setRole("root");
+        user.setStatus(1);
+        user.setRegIp("127.0.0.8");
+        //user.setUsername("刘恒根");
+        System.out.println(user);
+        int a = userServices.save(user);
+        return "user/login";
+    }
+
+    /*
+    * 登录
+    * */
+
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    public String Login(@RequestParam("username")String username,
+                        @RequestParam("password") String password){
+        // 先判断用户存不存在、判断密码是否正确
+        //通过名字查找用户；
+        User user = userServices.findByName(username);
+        if (user == null){
+            //用户名不存在跳转到登录页
+            return "user/login";
+        }else {
+            if (user.getPassword().equals(password)) {
+              return "user/index";
+            }
+        }
+        return "user/login";
+    }
+
 
     @ResponseBody
     @RequestMapping(value = "/get",method = RequestMethod.GET)

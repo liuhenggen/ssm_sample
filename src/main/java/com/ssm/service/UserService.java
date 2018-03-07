@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface UserService extends BaseService<User,Integer> {
     List<User> findAll();
+    User findByName(String username);
 }

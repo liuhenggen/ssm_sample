@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface UserDao extends BaseDao<User ,Integer> {
     List<User> findAll();
+    User findByName(String username);
 }

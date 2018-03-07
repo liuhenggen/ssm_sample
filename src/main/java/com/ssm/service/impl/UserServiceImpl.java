@@ -19,7 +19,27 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Integer save(User user) {
+        return userDaos.save(user);
+    }
+
+    @Override
+    public Integer update(User user) {
+        return null;
+    }
+
+    @Override
+    public Integer delete(Integer integer) {
+        return null;
+    }
+
+    @Override
     public List<User> findAll() {
         return userDaos.findAll();
+    }
+
+    @Override
+    public User findByName(String username) {
+        return userDaos.findByName(username);
     }
 }
